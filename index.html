@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomáš Danihel - Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="index.html" class="brand-logo">DANIHEL</a></div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-btn active">HOME</a>
+                <a href="about.html" class="nav-btn">ABOUT ME</a>
+                <a href="projects.html" class="nav-btn">PROJECTS</a>
+                <a href="worlds.html" class="nav-btn">WORLDS</a>
+                <a href="contact.html" class="nav-btn">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="accordion-container">
+            <div class="panel" style="background-image: url('hitman.png');" onclick="window.location.href='project.html?id=palenka'">
+                <h3 class="panel-title-vertical">Project: Factory Hitman</h3>
+                <div class="panel-content">
+                    <h2>Project: Factory Hitman</h2>
+                    <p>3D simulace z českého venkova (Godot / C#)</p>
+                    <a href="project.html?id=palenka" class="cta-button">MORE</a>
+                </div>
+            </div>
+
+            <div class="panel" style="background-image: url('palenka.png');" onclick="window.location.href='project.html?id=eatortoss'">
+                <h3 class="panel-title-vertical">Alcohol Dispute</h3>
+                <div class="panel-content">
+                    <h2>Alcohol Dispute</h2>
+                    <p>Webová aplikace pro sledování trvanlivosti potravin.</p>
+                    <a href="project.html?id=eatortoss" class="cta-button">MORE</a>
+                </div>
+            </div>
+
+            <div class="panel" style="background-image: url('duck.png');" onclick="window.location.href='project.html?id=ducking'">
+                <h3 class="panel-title-vertical">Duck Spree</h3>
+                <div class="panel-content">
+                    <h2>Duck Spree</h2>
+                    <p>Nezávislé herní studio a 3D duck simulator sandbox.</p>
+                    <a href="project.html?id=ducking" class="cta-button">MORE</a>
+                </div>
+            </div>
+
+            <div class="panel" style="background-image: url('bowman.png');" onclick="window.location.href='project.html?id=snow'">
+                <h3 class="panel-title-vertical">Bowman Fight</h3>
+                <div class="panel-content">
+                    <h2>Bowman Figh</h2>
+                    <p>Relaxační 3D hra s interaktivní deformací sněhu.</p>
+                    <a href="project.html?id=snow" class="cta-button">MORE</a>
+                </div>
+            </div>
+        </div>
+        
+        <section class="content-section" style="padding-bottom: 20px;">
+             <div class="section-header">
+                <h2>Latest Project</h2>
+             </div>
+
+             <div style="display: flex; flex-wrap: wrap; background: white; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
+                 <div style="flex: 1 1 400px; min-height: 300px; background-image: url('hitman.png'); background-size: cover; background-position: center;"></div>
+                 <div style="flex: 1 1 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="font-size: 0.8rem; font-weight: 700; color: #9a2a33; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Recently Updated</div>
+                    <h3 style="font-size: 2.2rem; color: #141414; margin-bottom: 15px; font-weight: 700;">Project: Factory Hitman</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 25px; font-weight: 400;">Nejnovější 3D simulace zaměřená na stealth mechaniky a prozkoumávání rozsáhlých továrních komplexů. Vytvořeno pomocí Godot Engine a C#.</p>
+                    <div>
+                        <a href="project.html?id=palenka" class="cta-button">Přečíst Devlog</a>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Projects & Games</h2>
+            </div>
+            
+            <div class="card-grid" id="projects-grid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">DANIHEL</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

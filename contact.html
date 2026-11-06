@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomáš Danihel - Contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="index.html" class="brand-logo">DANIHEL</a></div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="about.html" class="nav-btn">ABOUT ME</a>
+                <a href="projects.html" class="nav-btn">PROJECTS</a>
+                <a href="worlds.html" class="nav-btn">WORLDS</a>
+                <a href="contact.html" class="nav-btn active">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Contact & Socials</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 24px; color: #141414;">Get in Touch</h3>
+                    
+                    <div class="contact-info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #888;">EMAIL</div>
+                            <div style="font-weight: 700; color: #141414;">tdanihel06@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fa-brands fa-github"></i>
+                        <div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #888;">GITHUB</div>
+                            <div style="font-weight: 700; color: #141414;">*WORK IN PROGRESS*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="name...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="email@gmail.com...">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your projects..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%; text-align: center;">Send Message</button>
+                    </form>
+                    <div id="form-success" style="display: none; margin-top: 15px; color: #888; font-weight: 500; text-align: center;">
+                        Thank you! Your message has been sent.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">DANIHEL <span>/</span> GOKI STUDIO</div>
+            <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

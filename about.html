@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomáš Danihel - About</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="index.html" class="brand-logo">DANIHEL</a></div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="about.html" class="nav-btn active">ABOUT ME</a>
+                <a href="projects.html" class="nav-btn">PROJECTS</a>
+                <a href="worlds.html" class="nav-btn">WORLDS</a>
+                <a href="contact.html" class="nav-btn">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="about-clean-container">
+                <div class="about-main-card">
+                    <div class="about-header-flex">
+                        <div>
+                            <h3 class="about-name">Tomáš Danihel</h3>
+                            <span class="about-subtitle">Game Developer & Software Engineer</span>
+                        </div>
+                        <span class="about-badge">FEKT VUT Student</span>
+                    </div>
+                    
+                    <p class="about-text">
+                        I am a software engineering student at <strong>FEKT VUT v Brně</strong> and an independent developer passionate about building interactive 3D experiences, game mechanics, and web applications.
+                    </p>
+                    <p class="about-text">
+                        My focus centers on high-performance C# scripting, low-poly 3D graphics in <strong>Godot Engine</strong>, custom models in Blender, custom shaders, and clean frontend UI tooling. I thrive at the intersection of gameplay mechanics, technical logic, and visual polish.
+                    </p>
+
+                    <div style="margin-top: 30px;">
+                        <h4 class="about-subheading">Core Engineering Strengths</h4>
+                        <div class="competencies-grid">
+                            <div class="comp-box">
+                                <i class="fa-solid fa-code"></i>
+                                <div>
+                                    <strong>OOP & Game Systems</strong>
+                                    <p>Clean C# component architecture, state machines, and modular physics systems.</p>
+                                </div>
+                            </div>
+                            <div class="comp-box">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <div>
+                                    <strong>Graphics & Shaders</strong>
+                                    <p>Vertex deformation shaders, custom rendering passes, and foliage shaders in Godot.</p>
+                                </div>
+                            </div>
+                            <div class="comp-box">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                <div>
+                                    <strong>Optimization & Profiling</strong>
+                                    <p>FPS optimization, batching static geometry, and lightweight web performance.</p>
+                                </div>
+                            </div>
+                            <div class="comp-box">
+                                <i class="fa-solid fa-code-branch"></i>
+                                <div>
+                                    <strong>Version Control & Tools</strong>
+                                    <p>Git workflow, Blender low-poly pipeline, and responsive UI.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 35px;">
+                        <h4 class="about-subheading">Technical Stack</h4>
+                        <div class="skills-wrap">
+                            <span class="skill-badge"><i class="fa-solid fa-cube"></i> Godot Engine 4</span>
+                            <span class="skill-badge"><i class="fa-solid fa-cube"></i> Unity</span>
+                            <span class="skill-badge"><i class="fa-solid fa-cube"></i> Raylib</span>
+                            <span class="skill-badge"><i class="fa-solid fa-code"></i> C# / .NET</span>
+                            <span class="skill-badge"><i class="fa-solid fa-code"></i> C++</span>
+                            <span class="skill-badge"><i class="fa-solid fa-code"></i> Java</span>
+                            <span class="skill-badge"><i class="fa-solid fa-code"></i> Rust</span>
+                            <span class="skill-badge"><i class="fa-solid fa-code"></i> MySql / MongoDB with Php</span>
+                            <span class="skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Shader Programming</span>
+                            <span class="skill-badge"><i class="fa-brands fa-html5"></i> Web Front-End (JS/CSS)</span>
+                            <span class="skill-badge"><i class="fa-solid fa-shapes"></i> 3D Modeling (Blender)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-side-card">
+                    <h4 class="about-subheading" style="margin-bottom: 20px;">Professional Overview</h4>
+                    <div class="clean-info-row">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div><small>EDUCATION</small><div>FEKT VUT v Brně</div></div>
+                    </div>
+                    <div class="clean-info-row">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <div><small>SEEKING ROLES</small><div>Junior Game Dev / Web</div></div>
+                    </div>
+                    <div class="clean-info-row">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><small>LOCATION</small><div>Brno, Czech Republic</div></div>
+                    </div>
+
+                    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #eee;">
+                        <a href="contact.html" class="cta-button" style="width: 100%; text-align: center;">Hire / Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">DANIHEL</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

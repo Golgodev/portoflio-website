@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tomáš Danihel - Project Details</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="index.html" class="brand-logo">DANIHEL</a></div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="about.html" class="nav-btn">ABOUT ME</a>
+                <a href="projects.html" class="nav-btn active">PROJECTS</a>
+                <a href="worlds.html" class="nav-btn">WORLDS</a>
+                <a href="contact.html" class="nav-btn">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <a href="projects.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <article class="devlog-container">
+                <div class="devlog-hero">
+                    <img id="devlog-banner" src="" alt="Project Image">
+                    <div class="devlog-hero-overlay">
+                        <div class="devlog-hero-text">
+                            <div id="devlog-tags-container" class="tags-list" style="margin-bottom: 8px;"></div>
+                            <h1 id="devlog-title">Project Title</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devlog-meta-bar">
+                    <div class="devlog-meta-item"><strong>Tech:</strong> <span id="devlog-tech">Godot / C#</span></div>
+                    <div class="devlog-meta-item"><strong>Status:</strong> <span id="devlog-status">In Development</span></div>
+                    <div class="devlog-meta-item"><strong>Role:</strong> <span id="devlog-role">Solo Developer</span></div>
+                </div>
+
+                <div class="devlog-body" id="devlog-content">
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">DANIHEL</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
