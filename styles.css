@@ -774,3 +774,87 @@ border-bottom: 1px solid #ddd;
 .devlog-hero-text h1 { font-size: 1.8rem; }
 .footer-inner { flex-direction: column; text-align: center; }
 }
+
+/* =========================================
+   DARK THEME & TOGGLE BUTTON
+========================================= */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--main-red);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Theme Overrides */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: rgba(18, 18, 18, 0.95);
+}
+
+body.dark-theme .nav-btn { color: #bbb; }
+body.dark-theme .mobile-menu-btn { color: #e0e0e0; }
+body.dark-theme .nav-links.mobile-open { background-color: #1e1e1e; border-color: #333; }
+
+/* Background Overrides */
+body.dark-theme .card,
+body.dark-theme .wip-box,
+body.dark-theme .contact-card,
+body.dark-theme .about-main-card,
+body.dark-theme .about-side-card,
+body.dark-theme .devlog-container,
+body.dark-theme div[style*="background: white"] {
+    background-color: #1e1e1e !important;
+}
+
+/* Text Overrides */
+body.dark-theme h3, 
+body.dark-theme h1, 
+body.dark-theme h2:not(.panel-content h2),
+body.dark-theme .contact-info-item div div:nth-child(2) {
+    color: #eee !important;
+}
+
+body.dark-theme p, 
+body.dark-theme .section-header p,
+body.dark-theme .about-text {
+    color: #bbb !important;
+}
+
+/* Forms & UI Elements */
+body.dark-theme .comp-box,
+body.dark-theme .form-group input, 
+body.dark-theme .form-group textarea {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #eee !important;
+}
+
+body.dark-theme .comp-box strong, body.dark-theme .form-group label { color: #eee !important; }
+body.dark-theme .comp-box p { color: #bbb !important; }
+
+body.dark-theme .clean-info-row i, 
+body.dark-theme .skill-badge {
+    background-color: #2a2a2a !important;
+    color: #eee !important;
+}

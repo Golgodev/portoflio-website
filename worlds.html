@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Tomáš Danihel - Worlds</title>
+    
+    <!-- PŘIDÁNO: Skript pro interaktivní 3D modely -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,20 +22,60 @@
                 <a href="index.html" class="nav-btn">HOME</a>
                 <a href="about.html" class="nav-btn">ABOUT ME</a>
                 <a href="projects.html" class="nav-btn">PROJECTS</a>
-                <a href="worlds.html" class="nav-btn active">WORLDS</a>
+                <a href="worlds.html" class="nav-btn active">MODELS</a>
                 <a href="contact.html" class="nav-btn">CONTACT</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="worlds-container">
-            <div class="wip-box">
-                <i class="fa-solid fa-compass-drafting"></i>
-                <h1>Work in progress</h1>
-                <p>The interactive 3D world viewer and level environments section is currently under development.</p>
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Interactive 3D Worlds</h2>
+                <div class="divider"></div>
+                <p>Prohlédni si mé 3D modely. Tažením myši model otočíš, kolečkem přiblížíš.</p>
             </div>
-        </div>
+
+            <!-- Využíváme tvou existující card-grid pro zarovnání -->
+            <div class="card-grid">
+                
+                <!-- KARTA PRO PRVNÍ 3D MODEL -->
+                <div class="card">
+                    <!-- 3D Prohlížeč -->
+                    <model-viewer 
+                        src="mod_building_var1.glb" 
+                        alt="3D model ukázka"
+                        camera-controls 
+                        auto-rotate
+                        shadow-intensity="1"
+                        style="width: 100%; height: 300px; background-color: #141414; cursor: grab;">
+                    </model-viewer>
+                    
+                    <div class="card-body">
+                        <h3>Název Modelu 1</h3>
+                        <p>Low-poly model vytvořený v Blenderu pro hru Ducking Spree. Zkus si ho otočit a přiblížit!</p>
+                    </div>
+                </div>
+
+                <!-- KARTA PRO DRUHÝ 3D MODEL -->
+                <div class="card">
+                    <model-viewer 
+                        src="cesta_k_dalsimu_modelu.glb" 
+                        alt="3D model ukázka 2"
+                        camera-controls 
+                        auto-rotate
+                        shadow-intensity="1"
+                        style="width: 100%; height: 300px; background-color: #141414; cursor: grab;">
+                    </model-viewer>
+                    
+                    <div class="card-body">
+                        <h3>Název Modelu 2</h3>
+                        <p>Asset budovy pro My Summer Pálenka. Optimalizováno pro Godot engine.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -41,12 +84,17 @@
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
+                <a href="worlds.html">Models</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
             </div>
             <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
         </div>
     </footer>
+
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+    </button>
     
     <script src="script.js"></script>
 </body>

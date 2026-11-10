@@ -218,3 +218,30 @@ document.addEventListener("DOMContentLoaded", () => {
         loadProjectDetail();
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeBtn = document.getElementById('theme-toggle');
+    
+    if (themeBtn) {
+        const themeIcon = themeBtn.querySelector('i');
+
+        // 1. Check if the user already chose dark mode in the past
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // 2. Toggle logic on click
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    }
+});
