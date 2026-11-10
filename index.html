@@ -69,10 +69,17 @@
                 <h2>Latest Project</h2>
              </div>
 
-             <div style="display: flex; flex-wrap: wrap; background: white; border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden;">
-                 <div style="flex: 1 1 400px; min-height: 300px; background-image: url('hitman.png'); background-size: cover; background-position: center;"></div>
+             <div style="display: flex; flex-wrap: wrap; background: white; border-radius: 0px; overflow: hidden;">
+                 
+                 <div id="latest-project-slider" style="position: relative; flex: 1 1 400px; min-height: 300px; background-image: url('hitman.png'); background-size: cover; background-position: center;">
+                     
+                     <button class="carousel-btn prev" id="latest-prev">&#10094;</button>
+                     <button class="carousel-btn next" id="latest-next">&#10095;</button>
+
+                 </div>
+                 
                  <div style="flex: 1 1 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-size: 0.8rem; font-weight: 700; color: #9a2a33; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Recently Updated</div>
+                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--main-red); text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px;">Recently Updated</div>
                     <h3 style="font-size: 2.2rem; color: #141414; margin-bottom: 15px; font-weight: 700;">Project: Factory Hitman</h3>
                     <p style="color: #666; line-height: 1.6; margin-bottom: 25px; font-weight: 400;">Nejnovější 3D simulace zaměřená na stealth mechaniky a prozkoumávání rozsáhlých továrních komplexů. Vytvořeno pomocí Godot Engine a C#.</p>
                     <div>
@@ -82,14 +89,6 @@
             </div>
          </section>
 
-        <section class="content-section">
-            <div class="section-header">
-                <h2>Projects & Games</h2>
-            </div>
-            
-            <div class="card-grid" id="projects-grid">
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -104,7 +103,39 @@
             <div class="footer-copy">&copy; 2026 Tomáš Danihel. All rights reserved.</div>
         </div>
     </footer>
-    
+
+    <script>
+        const latestImages = [
+            "hitman.png", 
+            "goki_games.png", 
+            "duck.png"  
+        ];
+
+        let latestCurrentIndex = 0;
+        const sliderContainer = document.getElementById("latest-project-slider");
+        const latestPrevBtn = document.getElementById("latest-prev");
+        const latestNextBtn = document.getElementById("latest-next");
+
+        function updateLatestSlider() {
+            sliderContainer.style.backgroundImage = `url('${latestImages[latestCurrentIndex]}')`;
+        }
+
+        latestNextBtn.addEventListener("click", () => {
+            latestCurrentIndex++;
+            if (latestCurrentIndex >= latestImages.length) {
+                latestCurrentIndex = 0;
+            }
+            updateLatestSlider();
+        });
+
+        latestPrevBtn.addEventListener("click", () => {
+            latestCurrentIndex--;
+            if (latestCurrentIndex < 0) {
+                latestCurrentIndex = latestImages.length - 1; 
+            }
+            updateLatestSlider();
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

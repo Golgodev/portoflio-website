@@ -148,7 +148,8 @@ function renderCards(filterTag = 'ALL') {
 
             html += `
                 <div class="card">
-                    <div class="card-img-wrap">
+                    <!-- PŘIDÁNO: onclick pro otevření detailu projektu kliknutím na obrázek -->
+                    <div class="card-img-wrap" onclick="window.location.href='project.html?id=${item.id}'">
                         <img src="${item.img}" alt="${item.title}">
                     </div>
                     <div class="card-body">
